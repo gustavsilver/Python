@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 14 21:34:00 2019
+
+@author: Gsilva
+"""
+import webbrowser
+import time
+import os, glob
+
+
+totalPausa= 1
+contarPausa= 0
+
+print ("inicio a las" + time.ctime())
+
+while(contarPausa < totalPausa):
+             
+    webbrowser.open("https://www.onetecnyca.com")
+    contarPausa =contarPausa+1
+
+#limpiar descargas
+archivosBorrados = [] # a efecto de tener un reporte de qué se ha borrado
+
+# se buscan todos los archivos ".flac" en el directorio objetivo
+for archivo_csv in glob.glob("SensorHistory*.csv"): 
+    archivosBorrados.append(archivo_csv) # opcional, es  para saber que se borrar
+    os.unlink(archivo_csv)               # sólo se elimina una vez sino aparecerá error
+    #os.remove(archivo_csv)              # también es válido
+
+if archivosBorrados != []:
+    print(archivosBorrados)
+else:
+    print('Ningun Archivo SH.csv Borrado')    
+# fin---limpiar descargas
+
+    
+time.sleep(5)
+webbrowser.open("https://www.onetecnyca.com/Sensor/ExportData?id=431703&uxExportAll=Sensor&Sensor_Name=on&Date=on&Value=on")#cdp
+time.sleep(2)
+webbrowser.open("https://www.onetecnyca.com/Sensor/ExportData?id=431717&uxExportAll=Sensor&Sensor_Name=on&Date=on&Value=on")#vel
+time.sleep(2)
+webbrowser.open("https://www.onetecnyca.com/Sensor/ExportData?id=431715&uxExportAll=Sensor&Sensor_Name=on&Date=on&Value=on")#pdif
+time.sleep(2)
+webbrowser.open("https://www.onetecnyca.com/Sensor/ExportData?id=465974&uxExportAll=Sensor&Sensor_Name=on&Date=on&Formatted_Value=on")#HR
+time.sleep(2)
+webbrowser.open("https://www.onetecnyca.com/Sensor/ExportData?id=466021&uxExportAll=Sensor&Sensor_Name=on&Date=on&Formatted_Value=on")#HR
+time.sleep(2)
+webbrowser.open("https://www.onetecnyca.com/Sensor/ExportData?id=431498&uxExportAll=Sensor&Sensor_Name=on&Date=on&Value=on")#openclose
+time.sleep(2)
+
+
+
+os.rename ("SensorHistory.csv", '431703.csv')
+os.rename ("SensorHistory (1).csv", '431717.csv')
+os.rename ("SensorHistory (2).csv", '431715.csv')
+os.rename ("SensorHistory (3).csv", '465974.csv')
+os.rename ("SensorHistory (4).csv", '466021.csv')
+os.rename ("SensorHistory (5).csv", '431498.csv')
+
+
