@@ -1,0 +1,34 @@
+_______________________________________
+IBUTTON DATA DOWNLOAD
+_______________________________________
+Alphamach Inc.
+101-2205 Bombardier, Ste-Julie, Qc J3E 2J9 CANADA
+Tel: 450-466-3153
+email: info@alphamach.com
+www.alphamach.com
+
+
+iButton Info
+-----------------------------------------------------
+iButton S/N:     3B0000005ABE2341
+iButton Type:    DS1923
+WeeButton Rev:   V12 R068
+
+
+Mission Info
+-----------------------------------------------------
+Mission Init Date:                30-11-1999 0:00:00
+Mission Start-up:                 30-11-1999 0:00:00
+Download Date/Time:               05-11-2019 10:40:20
+Temp. Sample Rate:                60
+Hum. Sample Rate:                 60
+
+Mission Running:                  False
+Override Enable:                  False
+Override Occurred:                False
+Logs of present mission:           0
+Log count:              46262
+
+----------------- Data Download -------------------
+
+Date                     Temp. (TEMP_CELSIUS)         Hum (%) 
